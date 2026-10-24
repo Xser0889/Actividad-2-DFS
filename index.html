@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMedic Reparaciones S.A. de C.V.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="inicio">
+        <h1><span class="marca-tech">Tech</span><span class="marca-medic">Medic</span> Reparaciones S.A. de C.V.</h1>
+        <p>Reparamos iPads, laptops, teléfonos y PCs con rapidez, garantía y refacciones de calidad.</p>
+        <p><strong>Misión:</strong> Devolver la vida a tus dispositivos con un servicio honesto y profesional.</p>
+        <p><strong>Visión:</strong> Ser el taller de reparación de electrónicos más confiable de la región.</p>
+    </header>
+
+    <main>
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <img src="imagenes%20html/iphone-6-.png.webp" alt="Técnico reemplazando la pantalla rota de un teléfono">
+                    <h3>Cambio de pantallas</h3>
+                    <p>Reemplazo de pantallas rotas en teléfonos, iPads y laptops.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="imagenes%20html/Pasos_1-2.jpg" alt="Limpieza interna de una computadora">
+                    <h3>Mantenimiento y limpieza</h3>
+                    <p>Limpieza interna y optimización para laptops y PCs.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="imagenes%20html/images.jpg" alt="Memorias y discos de almacenamiento de datos">
+                    <h3>Recuperación de datos</h3>
+                    <p>Recuperamos fotos y archivos importantes de equipos dañados.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="tareas">
+            <h2>Gestor de Reparaciones</h2>
+            <div class="container">
+                <label for="nueva-tarea">Dispositivo y falla a reparar</label>
+                <input type="text" id="nueva-tarea" placeholder="Ej. iPhone 12 - pantalla rota" autocomplete="off">
+                <button type="button" id="agregar-tarea">Agregar Reparación</button>
+                <p id="mensaje-error" class="mensaje-error" role="alert"></p>
+                <ul id="lista-tareas"></ul>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formsubmit.co/AL07199922@tecmilenio.mx" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" minlength="10" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="redes">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener">X</a></li>
+        </ul>
+        <p>&copy; 2026 TechMedic Reparaciones. Todos los derechos reservados.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

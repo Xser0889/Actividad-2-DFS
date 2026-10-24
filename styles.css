@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #ffffff;
+}
+
+#inicio {
+    background-color: #064d00;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #003514 0%, #064d00 100%);
+    background-size: 30px 30px, 30px 30px, 100% 100%;
+    border-bottom: 5px solid #02b1b7;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.marca-tech {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.marca-medic {
+    font-weight: 800;
+    color: #3fd9de;
+}
+
+#inicio p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+#servicios,
+#contacto {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #0a7300;
+    margin-bottom: 20px;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 0;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 4px solid #02b1b7;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 53, 20, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta {
+        transition: none;
+    }
+
+    .tarjeta:hover {
+        transform: none;
+    }
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    color: #0a7300;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    padding: 0 20px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6b7280;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #02b1b7;
+    outline-offset: 2px;
+}
+
+button {
+    width: 100%;
+    background-color: #0a7300;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #085c00;
+}
+
+footer {
+    background-color: #003514;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.redes a {
+    color: #02b1b7;
+}
+
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio {
+        padding: 30px 15px;
+    }
+
+    #inicio h1 {
+        font-size: 1.5rem;
+    }
+
+    #servicios,
+    #contacto {
+        padding: 30px 15px;
+    }
+
+    .tarjeta h3 {
+        font-size: 20px;
+    }
+
+    .tarjeta p {
+        font-size: 16px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+/* ===== Gestor de Reparaciones ===== */
+#tareas {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-top: 4px solid #02b1b7;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.mensaje-error {
+    color: #b91c1c;
+    font-weight: bold;
+    margin-top: 10px;
+    min-height: 1.6em;
+}
+
+#lista-tareas {
+    list-style: none;
+}
+
+#lista-tareas li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#lista-tareas input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+#lista-tareas .nombre-tarea {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#lista-tareas li.completa .nombre-tarea {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+#lista-tareas button {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+#lista-tareas .btn-eliminar {
+    background-color: #b91c1c;
+}
+
+#lista-tareas .btn-eliminar:hover {
+    background-color: #991b1b;
+}
+
+@media (max-width: 480px) {
+    #tareas {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #lista-tareas li {
+        flex-wrap: wrap;
+    }
+
+    #lista-tareas .nombre-tarea {
+        flex-basis: calc(100% - 40px);
+    }
+}
